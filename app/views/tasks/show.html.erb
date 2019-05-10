@@ -1,5 +1,10 @@
 <h1><%= @task.title %></h1>
 <p><%= @task.details %></p>
+<% if @task.completed == true %>
+  <i class="fas fa-check-circle"></i><p>This task has been completed</p>
+     <% else %>
+      <i class="far fa-circle"></i> <p>This task has not been completed yet</p>
+      <% end %>
 
 <%= link_to "Homepage", tasks_path %>
 
